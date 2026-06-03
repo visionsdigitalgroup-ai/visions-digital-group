@@ -59,13 +59,6 @@ export default function Navbar() {
             Solutions
           </Link>
 
-          <Link
-            href="/locations"
-            className="text-slate-300 transition hover:text-white"
-          >
-            Locations
-          </Link>
-
           <div className="relative">
 
             <button
