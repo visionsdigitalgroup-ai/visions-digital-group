@@ -5,6 +5,7 @@ import Features from "../components/Features";
 import Industries from "../components/Industries";
 import Workflow from "../components/Workflow";
 import Stats from "../components/Stats";
+import ResultsSection from '@/components/ResultsSection';
 import ConsultationRequest from "../components/ConsultationRequest";
 
 export default function Home() {
@@ -31,6 +32,9 @@ export default function Home() {
 
       {/* Results */}
       <Stats />
+
+      {/* Results */}
+      <ResultsSection />
 
       {/* Conversion */}
       <ConsultationRequest />

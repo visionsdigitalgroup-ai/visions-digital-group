@@ -161,6 +161,9 @@ export default function Footer() {
               >
                 Locations
               </Link>
+              <Link href="/case-studies">
+                  Case Studies
+              </Link>
 
             </div>
 
