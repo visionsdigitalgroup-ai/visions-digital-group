@@ -10,12 +10,26 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
 
-    const { name, email, businessType } = body;
+    const {
+      name,
+      email,
+      phone,
+      company,
+      businessType,
+      employees,
+      biggestChallenge,
+      source,
+    } = body;
 
-    if (!name || !email) {
+    if (!name || !email || !company) {
       return NextResponse.json(
-        { error: "Missing required fields" },
-        { status: 400 }
+        {
+          error:
+            "Name, email and company are required",
+        },
+        {
+          status: 400,
+        }
       );
     }
 
@@ -25,7 +39,16 @@ export async function POST(req: Request) {
         {
           name,
           email,
-          business_type: businessType,
+          phone,
+          company,
+          business_type:
+            businessType,
+          employees,
+          biggest_challenge:
+            biggestChallenge,
+          source:
+            source ||
+            "website",
         },
       ]);
 
@@ -33,20 +56,32 @@ export async function POST(req: Request) {
       console.error(error);
 
       return NextResponse.json(
-        { error: error.message },
-        { status: 500 }
+        {
+          error:
+            error.message,
+        },
+        {
+          status: 500,
+        }
       );
     }
 
     return NextResponse.json({
       success: true,
+      message:
+        "Founder added successfully",
     });
   } catch (error) {
     console.error(error);
 
     return NextResponse.json(
-      { error: "Server Error" },
-      { status: 500 }
+      {
+        error:
+          "Internal server error",
+      },
+      {
+        status: 500,
+      }
     );
   }
 }
