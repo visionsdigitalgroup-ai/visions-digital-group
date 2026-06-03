@@ -1,15 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 
 export default function Navbar() {
-  const [mobileOpen, setMobileOpen] =
-    useState(false);
-
-  const [industriesOpen, setIndustriesOpen] =
-    useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [industriesOpen, setIndustriesOpen] = useState(false);
 
   function closeMenus() {
     setMobileOpen(false);
@@ -23,41 +21,56 @@ export default function Navbar() {
 
         <Link
           href="/"
-          className="text-xl font-bold text-white transition hover:text-blue-400"
+          className="flex items-center gap-4"
         >
-          Visions Digital Group
+          <Image
+            src="/logo.png"
+            alt="Visions Digital Group"
+            width={52}
+            height={52}
+            priority
+            className="h-12 w-12 rounded-xl object-contain"
+          />
+
+          <div className="hidden lg:block">
+            <div className="text-lg font-bold text-white">
+              Visions Digital Group
+            </div>
+
+            <div className="text-xs text-slate-400">
+              Online Presence Management
+            </div>
+          </div>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
 
           <a
-            href="#features"
+            href="/#features"
             className="text-slate-300 transition hover:text-white"
           >
             Platform
-          </a>
-
-          <a
-            href="#industries"
-            className="text-slate-300 transition hover:text-white"
-          >
-            Who We Help
           </a>
 
           <Link
             href="/industries"
             className="text-slate-300 transition hover:text-white"
           >
-            Services
+            Solutions
+          </Link>
+
+          <Link
+            href="/locations"
+            className="text-slate-300 transition hover:text-white"
+          >
+            Locations
           </Link>
 
           <div className="relative">
 
             <button
               onClick={() =>
-                setIndustriesOpen(
-                  !industriesOpen
-                )
+                setIndustriesOpen(!industriesOpen)
               }
               className="flex items-center gap-2 text-slate-300 transition hover:text-white"
             >
@@ -65,11 +78,7 @@ export default function Navbar() {
 
               <ChevronDown
                 size={16}
-                className={`transition ${
-                  industriesOpen
-                    ? "rotate-180"
-                    : ""
-                }`}
+                className={`transition ${industriesOpen ? "rotate-180" : ""}`}
               />
             </button>
 
@@ -81,7 +90,7 @@ export default function Navbar() {
                   <Link
                     href="/industries"
                     onClick={closeMenus}
-                    className="block rounded-xl px-4 py-3 font-semibold text-white transition hover:bg-slate-800"
+                    className="block rounded-xl px-4 py-3 font-semibold text-white hover:bg-slate-800"
                   >
                     View All Industries
                   </Link>
@@ -93,7 +102,7 @@ export default function Navbar() {
                   <Link
                     href="/roofing-marketing-platform"
                     onClick={closeMenus}
-                    className="block rounded-xl px-4 py-3 text-slate-300 transition hover:bg-slate-800 hover:text-white"
+                    className="block rounded-xl px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-white"
                   >
                     Roofing Companies
                   </Link>
@@ -101,7 +110,7 @@ export default function Navbar() {
                   <Link
                     href="/hvac-marketing-platform"
                     onClick={closeMenus}
-                    className="block rounded-xl px-4 py-3 text-slate-300 transition hover:bg-slate-800 hover:text-white"
+                    className="block rounded-xl px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-white"
                   >
                     HVAC Companies
                   </Link>
@@ -109,7 +118,7 @@ export default function Navbar() {
                   <Link
                     href="/plumbing-marketing-platform"
                     onClick={closeMenus}
-                    className="block rounded-xl px-4 py-3 text-slate-300 transition hover:bg-slate-800 hover:text-white"
+                    className="block rounded-xl px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-white"
                   >
                     Plumbing Companies
                   </Link>
@@ -117,7 +126,7 @@ export default function Navbar() {
                   <Link
                     href="/electrical-marketing-platform"
                     onClick={closeMenus}
-                    className="block rounded-xl px-4 py-3 text-slate-300 transition hover:bg-slate-800 hover:text-white"
+                    className="block rounded-xl px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-white"
                   >
                     Electrical Contractors
                   </Link>
@@ -125,7 +134,7 @@ export default function Navbar() {
                   <Link
                     href="/contractor-marketing-platform"
                     onClick={closeMenus}
-                    className="block rounded-xl px-4 py-3 text-slate-300 transition hover:bg-slate-800 hover:text-white"
+                    className="block rounded-xl px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-white"
                   >
                     General Contractors
                   </Link>
@@ -133,7 +142,7 @@ export default function Navbar() {
                   <Link
                     href="/agency-growth-platform"
                     onClick={closeMenus}
-                    className="block rounded-xl px-4 py-3 text-slate-300 transition hover:bg-slate-800 hover:text-white"
+                    className="block rounded-xl px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-white"
                   >
                     Marketing Agencies
                   </Link>
@@ -148,8 +157,8 @@ export default function Navbar() {
         </nav>
 
         <a
-          href="#consultation"
-          className="hidden rounded-xl bg-white px-5 py-3 font-semibold text-black transition hover:scale-105 md:block"
+          href="/#consultation"
+          className="hidden rounded-xl bg-blue-500 px-5 py-3 font-semibold text-white transition hover:bg-blue-600 md:block"
         >
           Schedule Consultation
         </a>
@@ -168,97 +177,6 @@ export default function Navbar() {
         </button>
 
       </div>
-
-      {mobileOpen && (
-        <div className="border-t border-slate-800 bg-slate-950 md:hidden">
-
-          <div className="space-y-1 px-6 py-6">
-
-            <a
-              href="#features"
-              onClick={closeMenus}
-              className="block rounded-xl px-4 py-3 text-slate-300 hover:bg-slate-900"
-            >
-              Platform
-            </a>
-
-            <a
-              href="#industries"
-              onClick={closeMenus}
-              className="block rounded-xl px-4 py-3 text-slate-300 hover:bg-slate-900"
-            >
-              Who We Help
-            </a>
-
-            <Link
-              href="/industries"
-              onClick={closeMenus}
-              className="block rounded-xl px-4 py-3 text-slate-300 hover:bg-slate-900"
-            >
-              Services
-            </Link>
-
-            <div className="my-4 border-t border-slate-800" />
-
-            <Link
-              href="/roofing-marketing-platform"
-              onClick={closeMenus}
-              className="block rounded-xl px-4 py-3 text-slate-300 hover:bg-slate-900"
-            >
-              Roofing Companies
-            </Link>
-
-            <Link
-              href="/hvac-marketing-platform"
-              onClick={closeMenus}
-              className="block rounded-xl px-4 py-3 text-slate-300 hover:bg-slate-900"
-            >
-              HVAC Companies
-            </Link>
-
-            <Link
-              href="/plumbing-marketing-platform"
-              onClick={closeMenus}
-              className="block rounded-xl px-4 py-3 text-slate-300 hover:bg-slate-900"
-            >
-              Plumbing Companies
-            </Link>
-
-            <Link
-              href="/electrical-marketing-platform"
-              onClick={closeMenus}
-              className="block rounded-xl px-4 py-3 text-slate-300 hover:bg-slate-900"
-            >
-              Electrical Contractors
-            </Link>
-
-            <Link
-              href="/contractor-marketing-platform"
-              onClick={closeMenus}
-              className="block rounded-xl px-4 py-3 text-slate-300 hover:bg-slate-900"
-            >
-              General Contractors
-            </Link>
-
-            <Link
-              href="/agency-growth-platform"
-              onClick={closeMenus}
-              className="block rounded-xl px-4 py-3 text-slate-300 hover:bg-slate-900"
-            >
-              Marketing Agencies
-            </Link>
-
-            <a
-              href="#consultation"
-              className="mt-4 block rounded-xl bg-white px-4 py-3 text-center font-semibold text-black"
-            >
-              Schedule Consultation
-            </a>
-
-          </div>
-
-        </div>
-      )}
 
     </header>
   );
