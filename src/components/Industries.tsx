@@ -9,6 +9,8 @@ import {
   Briefcase,
 } from "lucide-react";
 
+import { motion } from "motion/react";
+
 const industries = [
   {
     icon: Hammer,
@@ -56,7 +58,18 @@ export default function Industries() {
     >
       <div className="mx-auto max-w-7xl px-6">
 
-        <div className="text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.6,
+          }}
+          className="text-center"
+        >
 
           <div className="inline-flex rounded-full border border-blue-500/20 bg-blue-500/10 px-4 py-2 text-sm text-blue-400">
             Built For Service Businesses
@@ -71,24 +84,42 @@ export default function Industries() {
 
           <p className="mx-auto mt-6 max-w-4xl text-xl text-slate-400">
             Whether customers find you through Google Search,
-            Google Business Profile, reviews, referrals, social
-            media, or your website, VDG OS helps you attract,
-            convert, and retain more customers.
+            Google Business Profile, reviews, referrals,
+            social media, or your website, VDG OS helps
+            you attract, convert, and retain more customers.
           </p>
 
-        </div>
+        </motion.div>
 
         <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
 
-          {industries.map((industry) => {
+          {industries.map((industry, index) => {
             const Icon = industry.icon;
 
             return (
-              <div
+              <motion.div
                 key={industry.title}
-                className="group rounded-3xl border border-slate-800 bg-slate-900 p-8 transition duration-300 hover:border-blue-500/40 hover:bg-slate-800"
+                initial={{
+                  opacity: 0,
+                  y: 40,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.45,
+                  delay: index * 0.08,
+                }}
+                whileHover={{
+                  y: -8,
+                  scale: 1.02,
+                }}
+                className="group rounded-3xl border border-slate-800 bg-slate-900 p-8"
               >
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-500/10">
+
+                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-500/10 transition group-hover:bg-blue-500/20">
                   <Icon className="h-8 w-8 text-blue-400" />
                 </div>
 
@@ -100,7 +131,7 @@ export default function Industries() {
                   {industry.description}
                 </p>
 
-              </div>
+              </motion.div>
             );
           })}
 
