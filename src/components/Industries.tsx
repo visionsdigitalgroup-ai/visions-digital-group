@@ -4,47 +4,47 @@ import {
   Hammer,
   Wrench,
   Building2,
-  Briefcase,
+  Zap,
   Megaphone,
-  Store,
+  Briefcase,
 } from "lucide-react";
 
 const industries = [
   {
     icon: Hammer,
-    title: "Contractors",
+    title: "Roofing Contractors",
     description:
-      "Manage estimates, leads, projects, and customer follow-ups from one place.",
+      "Generate more roofing leads through local SEO, Google Business Profile optimization, review management, and online visibility.",
   },
   {
     icon: Wrench,
-    title: "HVAC & Home Services",
+    title: "HVAC Companies",
     description:
-      "Automate scheduling, service requests, reminders, and customer communication.",
+      "Increase service calls, automate follow-ups, improve local rankings, and convert more website visitors into customers.",
   },
   {
     icon: Building2,
-    title: "Roofing Companies",
+    title: "Plumbing Businesses",
     description:
-      "Track jobs, proposals, inspections, and sales pipelines efficiently.",
+      "Capture emergency service leads, strengthen online reputation, and streamline customer communication.",
   },
   {
-    icon: Briefcase,
-    title: "Consultants",
+    icon: Zap,
+    title: "Electrical Contractors",
     description:
-      "Manage clients, appointments, proposals, and recurring services.",
+      "Build trust through reviews, improve search visibility, and generate consistent opportunities from local search.",
   },
   {
     icon: Megaphone,
     title: "Marketing Agencies",
     description:
-      "Centralize reporting, websites, client management, and automations.",
+      "Manage websites, visibility campaigns, reporting, lead generation, and client growth from one platform.",
   },
   {
-    icon: Store,
-    title: "Local Businesses",
+    icon: Briefcase,
+    title: "Consultants & Professional Services",
     description:
-      "Capture leads, improve customer communication, and grow revenue.",
+      "Establish authority, improve online presence, generate qualified leads, and manage client relationships efficiently.",
   },
 ];
 
@@ -59,20 +59,21 @@ export default function Industries() {
         <div className="text-center">
 
           <div className="inline-flex rounded-full border border-blue-500/20 bg-blue-500/10 px-4 py-2 text-sm text-blue-400">
-            Trusted Across Multiple Industries
+            Built For Service Businesses
           </div>
 
           <h2 className="mt-8 text-5xl font-bold text-white">
-            Designed For The Businesses
+            Built For Businesses
             <span className="block text-blue-400">
-              That Keep Communities Running
+              That Depend On Visibility
             </span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-3xl text-xl text-slate-400">
-            Whether you run a local service company,
-            agency, consulting business, or trade operation,
-            VDG OS gives you the tools to scale without complexity.
+          <p className="mx-auto mt-6 max-w-4xl text-xl text-slate-400">
+            Whether customers find you through Google Search,
+            Google Business Profile, reviews, referrals, social
+            media, or your website, VDG OS helps you attract,
+            convert, and retain more customers.
           </p>
 
         </div>
@@ -98,6 +99,7 @@ export default function Industries() {
                 <p className="mt-4 text-slate-400">
                   {industry.description}
                 </p>
+
               </div>
             );
           })}

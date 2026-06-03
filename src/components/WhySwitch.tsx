@@ -1,36 +1,36 @@
 "use client";
 
 import {
-  Clock3,
-  TrendingUp,
-  Workflow,
-  DollarSign,
+  Search,
+  Star,
+  Users,
+  BarChart3,
 } from "lucide-react";
 
 const reasons = [
   {
-    icon: Clock3,
-    title: "Save Hours Every Week",
+    icon: Search,
+    title: "Get Found Online",
     description:
-      "Eliminate repetitive tasks and manual follow-ups through intelligent automation.",
+      "Improve your visibility across Google Search, local listings, maps, and search results so more customers discover your business.",
   },
   {
-    icon: Workflow,
-    title: "Everything Connected",
+    icon: Star,
+    title: "Build Trust & Reputation",
     description:
-      "Leads, CRM, websites, reporting, and automations work together in one platform.",
+      "Monitor reviews, strengthen your online reputation, and create the credibility customers look for before they contact you.",
   },
   {
-    icon: TrendingUp,
-    title: "Grow Faster",
+    icon: Users,
+    title: "Generate More Leads",
     description:
-      "Turn more leads into customers with faster response times and better tracking.",
+      "Turn website visitors, search traffic, and online visibility into qualified opportunities and new customers.",
   },
   {
-    icon: DollarSign,
-    title: "Reduce Software Costs",
+    icon: BarChart3,
+    title: "Manage Everything In One Place",
     description:
-      "Replace multiple subscriptions with a single business operating system.",
+      "Website performance, reviews, lead generation, customer management, automation, and reporting connected in one platform.",
   },
 ];
 
@@ -46,15 +46,17 @@ export default function WhySwitch() {
           </div>
 
           <h2 className="mt-8 text-5xl font-bold text-white">
-            Stop Managing Tools.
+            Your Online Presence
             <span className="block text-blue-400">
-              Start Managing Growth.
+              Drives Business Growth
             </span>
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-xl text-slate-400">
-            Most service businesses use multiple disconnected
-            systems. VDG OS brings everything together.
+            Most businesses use separate tools for websites,
+            SEO, reviews, lead management, reporting, and
+            customer communication. VDG OS brings everything
+            together into one connected platform.
           </p>
 
         </div>
@@ -67,7 +69,7 @@ export default function WhySwitch() {
             return (
               <div
                 key={item.title}
-                className="rounded-3xl border border-slate-800 bg-slate-900 p-8"
+                className="rounded-3xl border border-slate-800 bg-slate-900 p-8 transition hover:border-blue-500/30"
               >
                 <Icon className="mb-6 h-10 w-10 text-blue-400" />
 

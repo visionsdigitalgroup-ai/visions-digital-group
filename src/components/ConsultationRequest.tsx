@@ -2,9 +2,8 @@
 
 import { useState } from "react";
 
-export default function Waitlist() {
-  const [loading, setLoading] =
-    useState(false);
+export default function WaiConsultationRequest () {
+  const [loading, setLoading] = useState(false);
 
   async function handleSubmit(
     e: React.FormEvent<HTMLFormElement>
@@ -13,25 +12,19 @@ export default function Waitlist() {
 
     setLoading(true);
 
-    const formData =
-      new FormData(
-        e.currentTarget
-      );
+    const formData = new FormData(
+      e.currentTarget
+    );
 
     const payload = {
       name: formData.get("name"),
       email: formData.get("email"),
       phone: formData.get("phone"),
-      company:
-        formData.get("company"),
+      company: formData.get("company"),
       businessType:
-        formData.get(
-          "businessType"
-        ),
+        formData.get("businessType"),
       employees:
-        formData.get(
-          "employees"
-        ),
+        formData.get("employees"),
       biggestChallenge:
         formData.get(
           "biggestChallenge"
@@ -40,20 +33,19 @@ export default function Waitlist() {
     };
 
     try {
-      const response =
-        await fetch(
-          "/api/waitlist",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type":
-                "application/json",
-            },
-            body: JSON.stringify(
-              payload
-            ),
-          }
-        );
+      const response = await fetch(
+        "/api/waitlist",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type":
+              "application/json",
+          },
+          body: JSON.stringify(
+            payload
+          ),
+        }
+      );
 
       if (response.ok) {
         window.location.href =
@@ -78,19 +70,25 @@ export default function Waitlist() {
           <div className="text-center">
 
             <div className="inline-flex rounded-full border border-blue-500/20 bg-blue-500/10 px-4 py-2 text-sm text-blue-400">
-              Founding Member Program
+              Business Growth Consultation
             </div>
 
             <h2 className="mt-8 text-5xl font-bold text-white">
-              Apply For Early Access
+              Ready To Generate More Leads
+              <span className="block text-blue-400">
+                And Grow Your Business?
+              </span>
             </h2>
 
-            <p className="mx-auto mt-6 max-w-2xl text-xl text-slate-400">
-              Join the first wave of
-              businesses using VDG OS
-              and help shape the
-              future of business
-              automation.
+            <p className="mx-auto mt-6 max-w-3xl text-xl text-slate-400">
+              Tell us about your business,
+              current challenges, and growth
+              goals. We'll review your
+              information and show you how
+              VDG OS can help improve
+              visibility, generate more leads,
+              strengthen your online presence,
+              and streamline operations.
             </p>
 
           </div>
@@ -139,27 +137,27 @@ export default function Waitlist() {
                 className="rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-white"
               >
                 <option value="">
-                  Business Type
+                  Select Business Type
                 </option>
 
                 <option>
-                  HVAC
+                  Roofing Company
                 </option>
 
                 <option>
-                  Roofing
+                  HVAC Company
                 </option>
 
                 <option>
-                  Plumbing
+                  Plumbing Company
                 </option>
 
                 <option>
-                  Electrical
+                  Electrical Contractor
                 </option>
 
                 <option>
-                  Contractor
+                  General Contractor
                 </option>
 
                 <option>
@@ -192,30 +190,30 @@ export default function Waitlist() {
                 </option>
 
                 <option>
-                  2-5
+                  2-5 Employees
                 </option>
 
                 <option>
-                  6-10
+                  6-10 Employees
                 </option>
 
                 <option>
-                  11-25
+                  11-25 Employees
                 </option>
 
                 <option>
-                  26-50
+                  26-50 Employees
                 </option>
 
                 <option>
-                  50+
+                  50+ Employees
                 </option>
               </select>
 
               <textarea
                 name="biggestChallenge"
                 rows={4}
-                placeholder="What is the biggest challenge in your business right now?"
+                placeholder="What is your biggest challenge with visibility, lead generation, customer management, or business growth?"
                 className="rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-white"
               />
 
@@ -226,7 +224,7 @@ export default function Waitlist() {
               >
                 {loading
                   ? "Submitting..."
-                  : "Apply As Founding Member"}
+                  : "Request My Consultation"}
               </button>
 
             </div>
@@ -234,8 +232,10 @@ export default function Waitlist() {
           </form>
 
           <div className="mt-8 text-center text-sm text-slate-500">
-            Limited founding member
-            spots available.
+            No obligation. We'll review your
+            business and determine if VDG OS
+            is the right fit for your growth
+            goals.
           </div>
 
         </div>

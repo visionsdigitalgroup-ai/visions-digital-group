@@ -1,29 +1,41 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import DashboardPreview from "../components/DashboardPreview";
-import Industries from "../components/Industries";
 import WhySwitch from "../components/WhySwitch";
-import Stats from "../components/Stats";
 import Features from "../components/Features";
+import Industries from "../components/Industries";
 import Workflow from "../components/Workflow";
-import Roadmap from "../components/Roadmap";
-import FoundingMembers from "../components/FoundingMembers";
-import Waitlist from "../components/Waitlist";
+import Stats from "../components/Stats";
+import ConsultationRequest from "../components/ConsultationRequest";
 
 export default function Home() {
   return (
     <main>
       <Navbar />
+
+      {/* Positioning */}
       <Hero />
+
+      {/* Proof */}
       <DashboardPreview />
-      <Industries />
+
+      {/* Why businesses switch */}
       <WhySwitch />
-      <Stats />
+
+      {/* Platform capabilities */}
       <Features />
+
+      {/* Who it's built for */}
+      <Industries />
+
+      {/* How it works */}
       <Workflow />
-      <Roadmap />
-      <FoundingMembers />
-      <Waitlist />
+
+      {/* Results */}
+      <Stats />
+
+      {/* Conversion */}
+      <ConsultationRequest />
     </main>
   );
 }

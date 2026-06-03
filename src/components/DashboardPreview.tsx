@@ -11,29 +11,31 @@ export default function DashboardPreview() {
       <div className="relative mx-auto max-w-7xl">
 
         <div className="text-center">
+
           <div className="inline-flex rounded-full border border-blue-500/20 bg-blue-500/10 px-4 py-2 text-sm text-blue-400">
-            Multi Device Platform
+            Complete Online Presence Visibility
           </div>
 
           <h2 className="mt-8 text-5xl font-bold text-white md:text-6xl">
-            Run Your Entire Business
+            See Everything That Drives Growth
             <span className="block text-blue-400">
-              From Anywhere
+              In One Place
             </span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-3xl text-xl text-slate-400">
-            Whether you are in the office, on a job site,
-            or meeting clients, VDG OS keeps your leads,
-            customers, automations, and reporting connected.
+          <p className="mx-auto mt-6 max-w-4xl text-xl text-slate-400">
+            Monitor your website performance, online reviews,
+            search visibility, lead generation, customer activity,
+            automation, and business growth from a single
+            dashboard built specifically for service businesses.
           </p>
+
         </div>
 
         <div className="mt-24 flex flex-col items-center">
 
-          {/* Laptop /}
+          <div className="relative z-30 w-full max-w-[1000px]">
 
-          <div className="relative z-30 w-full max-w-[950px]">
             <div className="overflow-hidden rounded-t-3xl border border-slate-700 bg-slate-900 shadow-2xl">
 
               <div className="flex items-center gap-2 border-b border-slate-800 px-5 py-4">
@@ -45,60 +47,78 @@ export default function DashboardPreview() {
               <div className="p-8">
 
                 <div className="mb-8 flex items-center justify-between">
+
                   <div>
                     <h3 className="text-2xl font-bold text-white">
-                      VDG OS Dashboard
+                      VDG OS Command Center
                     </h3>
 
                     <p className="text-slate-400">
-                      Live Business Overview
+                      Online Presence & Business Intelligence
                     </p>
                   </div>
 
                   <div className="rounded-full bg-green-500/10 px-4 py-2 text-sm text-green-400">
-                    System Online
+                    Live Monitoring
                   </div>
+
                 </div>
 
                 <div className="grid gap-4 md:grid-cols-4">
 
                   <div className="rounded-xl bg-slate-800 p-5">
                     <div className="text-sm text-slate-400">
-                      Leads Today
+                      Website Traffic
                     </div>
 
                     <div className="mt-2 text-3xl font-bold text-white">
-                      27
+                      4,872
+                    </div>
+
+                    <div className="mt-1 text-sm text-slate-500">
+                      Monthly Visitors
                     </div>
                   </div>
 
                   <div className="rounded-xl bg-slate-800 p-5">
                     <div className="text-sm text-slate-400">
-                      Customers
+                      Google Reviews
                     </div>
 
                     <div className="mt-2 text-3xl font-bold text-white">
-                      184
+                      4.9 ★
+                    </div>
+
+                    <div className="mt-1 text-sm text-slate-500">
+                      Reputation Score
                     </div>
                   </div>
 
                   <div className="rounded-xl bg-slate-800 p-5">
                     <div className="text-sm text-slate-400">
-                      Revenue
+                      New Leads
                     </div>
 
                     <div className="mt-2 text-3xl font-bold text-white">
-                      $42.5K
+                      127
+                    </div>
+
+                    <div className="mt-1 text-sm text-slate-500">
+                      This Month
                     </div>
                   </div>
 
                   <div className="rounded-xl bg-slate-800 p-5">
                     <div className="text-sm text-slate-400">
-                      Automations
+                      Search Visibility
                     </div>
 
-                    <div className="mt-2 text-3xl font-bold text-white">
-                      12
+                    <div className="mt-2 text-3xl font-bold text-green-400">
+                      +38%
+                    </div>
+
+                    <div className="mt-1 text-sm text-slate-500">
+                      Growth
                     </div>
                   </div>
 
@@ -109,17 +129,19 @@ export default function DashboardPreview() {
                   <div className="col-span-2 rounded-xl bg-slate-800 p-6">
 
                     <h4 className="mb-6 font-semibold text-white">
-                      Revenue Growth
+                      Online Visibility Growth
                     </h4>
 
                     <div className="flex h-52 items-end gap-3">
-                      <div className="h-16 w-full rounded bg-blue-500/40" />
-                      <div className="h-20 w-full rounded bg-blue-500/40" />
+
+                      <div className="h-16 w-full rounded bg-blue-500/30" />
+                      <div className="h-20 w-full rounded bg-blue-500/30" />
                       <div className="h-24 w-full rounded bg-blue-500/40" />
-                      <div className="h-28 w-full rounded bg-blue-500/40" />
-                      <div className="h-36 w-full rounded bg-blue-500/50" />
-                      <div className="h-42 w-full rounded bg-blue-500/60" />
+                      <div className="h-28 w-full rounded bg-blue-500/50" />
+                      <div className="h-36 w-full rounded bg-blue-500/60" />
+                      <div className="h-42 w-full rounded bg-blue-500/70" />
                       <div className="h-48 w-full rounded bg-blue-500" />
+
                     </div>
 
                   </div>
@@ -127,38 +149,38 @@ export default function DashboardPreview() {
                   <div className="rounded-xl bg-slate-800 p-6">
 
                     <h4 className="mb-4 font-semibold text-white">
-                      Pipeline
+                      Lead Sources
                     </h4>
 
                     <div className="space-y-4">
 
                       <div className="flex justify-between">
                         <span className="text-slate-400">
-                          Won
+                          Google Search
                         </span>
 
                         <span className="font-bold text-green-400">
-                          24
+                          52
                         </span>
                       </div>
 
                       <div className="flex justify-between">
                         <span className="text-slate-400">
-                          Pending
-                        </span>
-
-                        <span className="font-bold text-yellow-400">
-                          12
-                        </span>
-                      </div>
-
-                      <div className="flex justify-between">
-                        <span className="text-slate-400">
-                          Proposals
+                          Google Business
                         </span>
 
                         <span className="font-bold text-blue-400">
-                          8
+                          38
+                        </span>
+                      </div>
+
+                      <div className="flex justify-between">
+                        <span className="text-slate-400">
+                          Website Forms
+                        </span>
+
+                        <span className="font-bold text-yellow-400">
+                          37
                         </span>
                       </div>
 
@@ -171,25 +193,25 @@ export default function DashboardPreview() {
                 <div className="mt-6 rounded-xl bg-slate-800 p-6">
 
                   <h4 className="mb-4 font-semibold text-white">
-                    Recent Leads
+                    Recent Opportunities
                   </h4>
 
                   <div className="grid gap-3 md:grid-cols-4">
 
                     <div className="rounded-lg bg-slate-900 p-4 text-white">
-                      John Smith
+                      Tampa Roofing Co.
                     </div>
 
                     <div className="rounded-lg bg-slate-900 p-4 text-white">
-                      Sarah Johnson
+                      Coastal HVAC
                     </div>
 
                     <div className="rounded-lg bg-slate-900 p-4 text-white">
-                      Mike Davis
+                      Bay Area Plumbing
                     </div>
 
                     <div className="rounded-lg bg-slate-900 p-4 text-white">
-                      Emily Brown
+                      Sunshine Electric
                     </div>
 
                   </div>
@@ -197,37 +219,37 @@ export default function DashboardPreview() {
                 </div>
 
               </div>
+
             </div>
 
             <div className="mx-auto h-5 w-48 rounded-b-3xl bg-slate-700" />
-          </div>
 
-          {/ Devices Below */}
+          </div>
 
           <div className="mt-12 flex flex-wrap items-end justify-center gap-16">
 
             <div className="w-[320px] rotate-[-6deg] rounded-[34px] border border-slate-700 bg-slate-900 p-5 shadow-2xl">
 
               <div className="mb-4 text-center text-slate-500">
-                CRM
+                Customer Hub
               </div>
 
               <div className="space-y-3">
 
                 <div className="rounded-lg bg-slate-800 p-4 text-white">
-                  John Smith
+                  Customers
                 </div>
 
                 <div className="rounded-lg bg-slate-800 p-4 text-white">
-                  Sarah Johnson
+                  Projects
                 </div>
 
                 <div className="rounded-lg bg-slate-800 p-4 text-white">
-                  Mike Davis
+                  Reviews
                 </div>
 
                 <div className="rounded-lg bg-slate-800 p-4 text-white">
-                  Emily Brown
+                  Invoices
                 </div>
 
               </div>
@@ -237,25 +259,25 @@ export default function DashboardPreview() {
             <div className="w-[190px] rotate-[8deg] rounded-[36px] border border-slate-700 bg-slate-900 p-4 shadow-2xl">
 
               <div className="mb-4 rounded-full bg-slate-800 py-2 text-center text-xs text-slate-400">
-                Mobile App
+                Business Snapshot
               </div>
 
               <div className="space-y-3">
 
                 <div className="rounded-lg bg-blue-500 p-4 text-center text-white">
-                  27 Leads
+                  Website Traffic
                 </div>
 
                 <div className="rounded-lg bg-slate-800 p-4 text-center text-white">
-                  18 Appointments
+                  Google Reviews
                 </div>
 
                 <div className="rounded-lg bg-slate-800 p-4 text-center text-white">
-                  CRM
+                  New Leads
                 </div>
 
                 <div className="rounded-lg bg-slate-800 p-4 text-center text-white">
-                  Reports
+                  Growth Report
                 </div>
 
               </div>
@@ -264,8 +286,32 @@ export default function DashboardPreview() {
 
           </div>
 
+          <div className="mt-16 flex flex-wrap justify-center gap-4">
+
+            {[
+              "Website Management",
+              "SEO Monitoring",
+              "Google Business Profile",
+              "Review Management",
+              "Lead Generation",
+              "Customer Management",
+              "Automation",
+              "Reporting",
+            ].map((feature) => (
+              <div
+                key={feature}
+                className="rounded-full border border-slate-800 bg-slate-900 px-4 py-2 text-sm text-slate-300"
+              >
+                {feature}
+              </div>
+            ))}
+
+          </div>
+
         </div>
+
       </div>
+
     </section>
   );
 }

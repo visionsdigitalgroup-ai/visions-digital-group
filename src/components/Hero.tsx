@@ -14,15 +14,15 @@ export default function Hero() {
         <div className="text-center">
 
           <div className="inline-flex items-center rounded-full border border-blue-500/20 bg-blue-500/10 px-5 py-2 text-sm font-medium text-blue-400">
-            The Operating System For Service Businesses
+            Online Presence & Business Operations Platform
           </div>
 
           <h1 className="mx-auto mt-8 max-w-6xl text-6xl font-bold tracking-tight text-white md:text-7xl">
 
-            Run Your Entire Business
+            Own Your Entire
 
             <span className="mt-2 block text-blue-400">
-              From One Platform
+              Online Presence
             </span>
 
           </h1>
@@ -30,11 +30,10 @@ export default function Hero() {
           <p className="mx-auto mt-8 max-w-4xl text-xl leading-relaxed text-slate-400">
 
             VDG OS helps service businesses manage
-            leads, customers, jobs, communication,
-            automation, reporting, and growth from a
-            single operating system designed to
-            eliminate disconnected tools and manual
-            processes.
+            websites, SEO, online reviews, local visibility,
+            lead generation, customer communication,
+            automation, and business operations from
+            one connected platform.
 
           </p>
 
@@ -47,29 +46,29 @@ export default function Hero() {
               Request Platform Access
             </a>
 
-            <button className="flex items-center justify-center gap-2 rounded-xl border border-slate-700 px-8 py-4 text-white transition hover:border-slate-500">
-
+            <a
+              href="#dashboard"
+              className="flex items-center justify-center gap-2 rounded-xl border border-slate-700 px-8 py-4 text-white transition hover:border-slate-500"
+            >
               <Play size={18} />
-
-              Schedule A Demo
-
-            </button>
+              See The Platform
+            </a>
 
           </div>
 
           <div className="mt-10 flex flex-wrap justify-center gap-6 text-sm text-slate-400">
 
-            <span>CRM & Customer Management</span>
+            <span>Website Management</span>
 
-            <span>Workflow Automation</span>
+            <span>SEO & Local Visibility</span>
+
+            <span>Reputation Management</span>
 
             <span>Lead Generation</span>
 
-            <span>Business Reporting</span>
+            <span>Customer Management</span>
 
-            <span>Team Operations</span>
-
-            <span>AI-Powered Workflows</span>
+            <span>Business Automation</span>
 
           </div>
 
@@ -86,48 +85,52 @@ export default function Hero() {
 
           <div className="rounded-3xl border border-slate-800 bg-slate-900 p-6">
 
-            <div className="text-4xl font-bold text-white">
-              CRM
+            <div className="text-3xl font-bold text-white">
+              Website
             </div>
 
-            <div className="mt-2 text-slate-400">
-              Manage customers, leads, and opportunities.
-            </div>
-
-          </div>
-
-          <div className="rounded-3xl border border-slate-800 bg-slate-900 p-6">
-
-            <div className="text-4xl font-bold text-white">
-              Jobs
-            </div>
-
-            <div className="mt-2 text-slate-400">
-              Track projects, appointments, and operations.
+            <div className="mt-3 text-slate-400">
+              Manage your website, hosting,
+              and online presence.
             </div>
 
           </div>
 
           <div className="rounded-3xl border border-slate-800 bg-slate-900 p-6">
 
-            <div className="text-4xl font-bold text-white">
-              AI
+            <div className="text-3xl font-bold text-white">
+              Visibility
             </div>
 
-            <div className="mt-2 text-slate-400">
-              Automate repetitive tasks and follow-ups.
+            <div className="mt-3 text-slate-400">
+              Improve SEO, local rankings,
+              and search performance.
             </div>
 
           </div>
 
           <div className="rounded-3xl border border-slate-800 bg-slate-900 p-6">
 
-            <div className="text-4xl font-bold text-white">
-              Growth
+            <div className="text-3xl font-bold text-white">
+              Reputation
             </div>
 
-            <div className="mt-2 text-slate-400">
-              Monitor performance and scale efficiently.
+            <div className="mt-3 text-slate-400">
+              Monitor reviews, ratings,
+              and customer feedback.
+            </div>
+
+          </div>
+
+          <div className="rounded-3xl border border-slate-800 bg-slate-900 p-6">
+
+            <div className="text-3xl font-bold text-white">
+              Operations
+            </div>
+
+            <div className="mt-3 text-slate-400">
+              Manage leads, customers,
+              automation, and reporting.
             </div>
 
           </div>

@@ -14,49 +14,69 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    "https://VISIONSDIGITALGROUP.COM"
+    "https://visionsdigitalgroup.com"
   ),
 
   title:
-    "VDG OS | Operating System for Service Businesses",
+    "VDG OS | Online Presence & Business Operations Platform",
 
   description:
-    "VDG OS helps service businesses manage leads, customers, jobs, communication, automation, reporting, and growth from a single platform.",
+    "VDG OS helps service businesses manage websites, SEO, online reviews, local visibility, lead generation, customer management, automation, reporting, and business operations from one connected platform.",
 
   keywords: [
-    "operating system for service businesses",
+    "online presence management",
     "service business software",
-    "contractor management software",
-    "business automation platform",
-    "crm for service businesses",
-    "workflow automation",
-    "operations management software",
-    "business operating system",
-    "service company software",
+    "local seo platform",
+    "google business profile management",
+    "reputation management software",
+    "lead generation platform",
+    "contractor marketing software",
+    "business operations platform",
+    "customer management software",
+    "website management platform",
+    "service business growth platform",
+    "home service marketing",
+    "online reputation management",
+    "local business software",
   ],
 
   openGraph: {
     title:
-      "VDG OS | Operating System for Service Businesses",
+      "VDG OS | Online Presence & Business Operations Platform",
 
     description:
-      "Manage leads, customers, jobs, communication, automation, reporting, and growth from one platform.",
+      "Manage your website, SEO, reviews, lead generation, customer communication, automation, and business operations from one platform.",
 
     type: "website",
 
     locale: "en_US",
 
     siteName: "VDG OS",
+
+    url:
+      "https://visionsdigitalgroup.com",
   },
 
   twitter: {
     card: "summary_large_image",
 
     title:
-      "VDG OS | Operating System for Service Businesses",
+      "VDG OS | Online Presence & Business Operations Platform",
 
     description:
-      "Run your entire business from one platform.",
+      "Own your entire online presence from one connected platform.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -74,19 +94,41 @@ const organizationSchema = {
 
   operatingSystem: "Web",
 
-  description:
-    "VDG OS is an operating system for service businesses that combines CRM, automation, communication, reporting, workflow management, and business operations into one platform.",
-
   url:
-    "https://VISIONSDIGITALGROUP.COM",
+    "https://visionsdigitalgroup.com",
 
   creator: {
-    "@type":
-      "Organization",
-
-    name:
-      "Visions Digital Group",
+    "@type": "Organization",
+    name: "Visions Digital Group",
   },
+
+  description:
+    "VDG OS is an online presence and business operations platform that helps service businesses manage websites, SEO, online reviews, local visibility, lead generation, customer communication, automation, reporting, and operations from one connected system.",
+
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+
+  audience: {
+    "@type":
+      "BusinessAudience",
+
+    audienceType:
+      "Service Businesses",
+  },
+
+  featureList: [
+    "Website Management",
+    "SEO Management",
+    "Google Business Profile Management",
+    "Review Management",
+    "Lead Generation",
+    "Customer CRM",
+    "Business Automation",
+    "Reporting Dashboard",
+  ],
 };
 
 export default function RootLayout({
@@ -104,10 +146,9 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html:
-              JSON.stringify(
-                organizationSchema
-              ),
+            __html: JSON.stringify(
+              organizationSchema
+            ),
           }}
         />
 
