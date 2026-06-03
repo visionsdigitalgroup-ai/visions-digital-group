@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -17,70 +21,136 @@ export const metadata: Metadata = {
     "https://visionsdigitalgroup.com"
   ),
 
-  title:
-    "VDG OS | Online Presence & Business Operations Platform",
+  title: {
+    default:
+      "VDG OS | Online Presence Management Platform",
+    template:
+      "%s | VDG OS",
+  },
 
   description:
-    "VDG OS helps service businesses manage websites, SEO, online reviews, local visibility, lead generation, customer management, automation, reporting, and business operations from one connected platform.",
+    "VDG OS helps service businesses manage websites, SEO, Google Business Profiles, online reviews, lead generation, customer communication, automation, reporting, and business operations from one connected platform.",
 
   keywords: [
     "online presence management",
+    "local seo",
+    "google business profile",
+    "review management",
+    "lead generation",
     "service business software",
-    "local seo platform",
-    "google business profile management",
-    "reputation management software",
-    "lead generation platform",
-    "contractor marketing software",
-    "business operations platform",
-    "customer management software",
-    "website management platform",
-    "service business growth platform",
-    "home service marketing",
+    "contractor marketing",
+    "website management",
+    "business automation",
+    "crm",
     "online reputation management",
-    "local business software",
+    "service business growth",
   ],
 
+  category: "Business Software",
+
+  authors: [
+    {
+      name: "Visions Digital Group",
+    },
+  ],
+
+  creator:
+    "Visions Digital Group",
+
+  publisher:
+    "Visions Digital Group",
+
+  alternates: {
+    canonical:
+      "https://visionsdigitalgroup.com",
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/logo.png",
+  },
+
   openGraph: {
-    title:
-      "VDG OS | Online Presence & Business Operations Platform",
-
-    description:
-      "Manage your website, SEO, reviews, lead generation, customer communication, automation, and business operations from one platform.",
-
     type: "website",
 
     locale: "en_US",
 
-    siteName: "VDG OS",
-
     url:
       "https://visionsdigitalgroup.com",
+
+    siteName: "VDG OS",
+
+    title:
+      "VDG OS | Online Presence Management Platform",
+
+    description:
+      "Manage websites, SEO, reviews, visibility, lead generation, customer communication, automation, and operations from one connected platform.",
+
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt:
+          "VDG OS Online Presence Management Platform",
+      },
+    ],
   },
 
   twitter: {
-    card: "summary_large_image",
+    card:
+      "summary_large_image",
 
     title:
-      "VDG OS | Online Presence & Business Operations Platform",
+      "VDG OS | Online Presence Management Platform",
 
     description:
-      "Own your entire online presence from one connected platform.",
+      "Websites • SEO • Reviews • Lead Generation",
+
+    images: [
+      "/og-image.jpg",
+    ],
   },
 
   robots: {
     index: true,
     follow: true,
+
     googleBot: {
       index: true,
       follow: true,
+      "max-image-preview":
+        "large",
       "max-video-preview": -1,
-      "max-image-preview": "large",
       "max-snippet": -1,
     },
   },
 };
 
 const organizationSchema = {
+  "@context":
+    "https://schema.org",
+
+  "@type":
+    "Organization",
+
+  name:
+    "Visions Digital Group",
+
+  url:
+    "https://visionsdigitalgroup.com",
+
+  logo:
+    "https://visionsdigitalgroup.com/logo.png",
+
+  description:
+    "Visions Digital Group helps service businesses improve online visibility, SEO, reputation, lead generation, automation, and business operations.",
+
+  sameAs: [],
+};
+
+const softwareSchema = {
   "@context":
     "https://schema.org",
 
@@ -94,30 +164,16 @@ const organizationSchema = {
 
   operatingSystem: "Web",
 
-  url:
-    "https://visionsdigitalgroup.com",
-
   creator: {
-    "@type": "Organization",
-    name: "Visions Digital Group",
+    "@type":
+      "Organization",
+
+    name:
+      "Visions Digital Group",
   },
 
   description:
-    "VDG OS is an online presence and business operations platform that helps service businesses manage websites, SEO, online reviews, local visibility, lead generation, customer communication, automation, reporting, and operations from one connected system.",
-
-  offers: {
-    "@type": "Offer",
-    price: "0",
-    priceCurrency: "USD",
-  },
-
-  audience: {
-    "@type":
-      "BusinessAudience",
-
-    audienceType:
-      "Service Businesses",
-  },
+    "VDG OS combines website management, SEO, Google Business Profile management, reviews, lead generation, CRM, automation, reporting, and business operations into one platform.",
 
   featureList: [
     "Website Management",
@@ -125,10 +181,20 @@ const organizationSchema = {
     "Google Business Profile Management",
     "Review Management",
     "Lead Generation",
-    "Customer CRM",
-    "Business Automation",
-    "Reporting Dashboard",
+    "CRM",
+    "Automation",
+    "Reporting",
   ],
+
+  offers: {
+    "@type":
+      "Offer",
+
+    price: "0",
+
+    priceCurrency:
+      "USD",
+  },
 };
 
 export default function RootLayout({
@@ -139,9 +205,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable}`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-screen bg-slate-950 text-white">
 
         <script
           type="application/ld+json"
@@ -152,7 +218,22 @@ export default function RootLayout({
           }}
         />
 
-        {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              softwareSchema
+            ),
+          }}
+        />
+
+        <Navbar />
+
+        <main className="flex-1">
+          {children}
+        </main>
+
+        <Footer />
 
       </body>
     </html>

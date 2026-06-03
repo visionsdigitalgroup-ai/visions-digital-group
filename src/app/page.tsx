@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import DashboardPreview from "../components/DashboardPreview";
 import WhySwitch from "../components/WhySwitch";
@@ -11,7 +10,6 @@ import ConsultationRequest from "../components/ConsultationRequest";
 export default function Home() {
   return (
     <main>
-      <Navbar />
 
       {/* Positioning */}
       <Hero />

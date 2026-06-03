@@ -4,7 +4,7 @@ import { ArrowRight, Play } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-slate-950">
+<section className="relative overflow-hidden bg-slate-950 pt-24">
 
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,#2563eb25,transparent_40%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,#1d4ed825,transparent_40%)]" />
