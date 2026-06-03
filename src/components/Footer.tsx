@@ -15,9 +15,10 @@ export default function Footer() {
             </h3>
 
             <p className="mt-4 text-sm leading-relaxed text-slate-400">
-              Helping service businesses dominate their online presence,
-              generate more leads, improve local visibility, and streamline
-              operations from one connected platform.
+              Online Presence Management Platform helping
+              service businesses improve visibility,
+              generate leads, strengthen reputation,
+              and streamline operations nationwide.
             </p>
 
           </div>
@@ -41,7 +42,7 @@ export default function Footer() {
                 href="/#dashboard"
                 className="block text-slate-400 transition hover:text-white"
               >
-                Dashboard
+                Platform Overview
               </a>
 
               <a
@@ -58,54 +59,7 @@ export default function Footer() {
           <div>
 
             <h4 className="mb-4 font-semibold text-white">
-              Industries
-            </h4>
-
-            <div className="space-y-3 text-sm">
-
-              <Link
-                href="/industries"
-                className="block text-slate-400 transition hover:text-white"
-              >
-                All Industries
-              </Link>
-
-              <Link
-                href="/roofing-marketing-platform"
-                className="block text-slate-400 transition hover:text-white"
-              >
-                Roofing Companies
-              </Link>
-
-              <Link
-                href="/hvac-marketing-platform"
-                className="block text-slate-400 transition hover:text-white"
-              >
-                HVAC Companies
-              </Link>
-
-              <Link
-                href="/plumbing-marketing-platform"
-                className="block text-slate-400 transition hover:text-white"
-              >
-                Plumbing Companies
-              </Link>
-
-              <Link
-                href="/electrical-marketing-platform"
-                className="block text-slate-400 transition hover:text-white"
-              >
-                Electrical Contractors
-              </Link>
-
-            </div>
-
-          </div>
-
-          <div>
-
-            <h4 className="mb-4 font-semibold text-white">
-              Services
+              Solutions
             </h4>
 
             <div className="space-y-3 text-sm">
@@ -134,6 +88,46 @@ export default function Footer() {
 
           </div>
 
+          <div>
+
+            <h4 className="mb-4 font-semibold text-white">
+              Company
+            </h4>
+
+            <div className="space-y-3 text-sm">
+
+              <Link
+                href="/about"
+                className="block text-slate-400 transition hover:text-white"
+              >
+                About
+              </Link>
+
+              <Link
+                href="/contact"
+                className="block text-slate-400 transition hover:text-white"
+              >
+                Contact
+              </Link>
+
+              <Link
+                href="/industries"
+                className="block text-slate-400 transition hover:text-white"
+              >
+                Industries
+              </Link>
+
+              <Link
+                href="/locations"
+                className="block text-slate-400 transition hover:text-white"
+              >
+                Locations
+              </Link>
+
+            </div>
+
+          </div>
+
         </div>
 
         <div className="mt-12 border-t border-slate-800 pt-8">
@@ -148,18 +142,25 @@ export default function Footer() {
             <div className="flex gap-6">
 
               <Link
-                href="/industries"
+                href="/about"
                 className="hover:text-white"
               >
-                Industries
+                About
               </Link>
 
-              <a
-                href="/#consultation"
+              <Link
+                href="/contact"
                 className="hover:text-white"
               >
-                Consultation
-              </a>
+                Contact
+              </Link>
+
+              <Link
+                href="/locations"
+                className="hover:text-white"
+              >
+                Locations
+              </Link>
 
             </div>
 
