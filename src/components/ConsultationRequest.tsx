@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "motion/react";
 
-export default function WaiConsultationRequest () {
-  const [loading, setLoading] = useState(false);
+export default function ConsultationRequest() {
+  const [loading, setLoading] =
+    useState(false);
 
   async function handleSubmit(
     e: React.FormEvent<HTMLFormElement>
@@ -12,19 +14,25 @@ export default function WaiConsultationRequest () {
 
     setLoading(true);
 
-    const formData = new FormData(
-      e.currentTarget
-    );
+    const formData =
+      new FormData(
+        e.currentTarget
+      );
 
     const payload = {
       name: formData.get("name"),
       email: formData.get("email"),
       phone: formData.get("phone"),
-      company: formData.get("company"),
+      company:
+        formData.get("company"),
       businessType:
-        formData.get("businessType"),
+        formData.get(
+          "businessType"
+        ),
       employees:
-        formData.get("employees"),
+        formData.get(
+          "employees"
+        ),
       biggestChallenge:
         formData.get(
           "biggestChallenge"
@@ -33,19 +41,20 @@ export default function WaiConsultationRequest () {
     };
 
     try {
-      const response = await fetch(
-        "/api/waitlist",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type":
-              "application/json",
-          },
-          body: JSON.stringify(
-            payload
-          ),
-        }
-      );
+      const response =
+        await fetch(
+          "/api/waitlist",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type":
+                "application/json",
+            },
+            body: JSON.stringify(
+              payload
+            ),
+          }
+        );
 
       if (response.ok) {
         window.location.href =
@@ -60,38 +69,71 @@ export default function WaiConsultationRequest () {
 
   return (
     <section
-      id="waitlist"
+      id="consultation"
       className="bg-slate-950 py-24"
     >
       <div className="mx-auto max-w-5xl px-6">
 
-        <div className="rounded-3xl border border-slate-800 bg-slate-900 p-12">
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 40,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.6,
+          }}
+          className="rounded-3xl border border-slate-800 bg-slate-900 p-12"
+        >
 
-          <div className="text-center">
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 20,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: true,
+            }}
+            transition={{
+              duration: 0.5,
+            }}
+            className="text-center"
+          >
 
             <div className="inline-flex rounded-full border border-blue-500/20 bg-blue-500/10 px-4 py-2 text-sm text-blue-400">
-              Business Growth Consultation
+              Free Business Growth Consultation
             </div>
 
             <h2 className="mt-8 text-5xl font-bold text-white">
-              Ready To Generate More Leads
+              Ready To Generate
+              More Leads?
               <span className="block text-blue-400">
-                And Grow Your Business?
+                Let's Build A Growth Plan.
               </span>
             </h2>
 
             <p className="mx-auto mt-6 max-w-3xl text-xl text-slate-400">
               Tell us about your business,
-              current challenges, and growth
-              goals. We'll review your
-              information and show you how
-              VDG OS can help improve
-              visibility, generate more leads,
-              strengthen your online presence,
-              and streamline operations.
+              current challenges, and goals.
+              We'll review your online
+              presence and identify
+              opportunities to improve
+              visibility, lead generation,
+              customer acquisition, and
+              operational efficiency.
             </p>
 
-          </div>
+          </motion.div>
 
           <form
             onSubmit={handleSubmit}
@@ -105,7 +147,7 @@ export default function WaiConsultationRequest () {
                 type="text"
                 required
                 placeholder="Full Name"
-                className="rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-white"
+                className="rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-white outline-none transition focus:border-blue-500"
               />
 
               <input
@@ -113,7 +155,7 @@ export default function WaiConsultationRequest () {
                 type="text"
                 required
                 placeholder="Company Name"
-                className="rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-white"
+                className="rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-white outline-none transition focus:border-blue-500"
               />
 
               <input
@@ -121,20 +163,20 @@ export default function WaiConsultationRequest () {
                 type="email"
                 required
                 placeholder="Business Email"
-                className="rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-white"
+                className="rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-white outline-none transition focus:border-blue-500"
               />
 
               <input
                 name="phone"
                 type="tel"
                 placeholder="Phone Number"
-                className="rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-white"
+                className="rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-white outline-none transition focus:border-blue-500"
               />
 
               <select
                 name="businessType"
                 required
-                className="rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-white"
+                className="rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-white outline-none transition focus:border-blue-500"
               >
                 <option value="">
                   Select Business Type
@@ -179,7 +221,7 @@ export default function WaiConsultationRequest () {
 
               <select
                 name="employees"
-                className="rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-white"
+                className="rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-white outline-none transition focus:border-blue-500"
               >
                 <option value="">
                   Team Size
@@ -213,32 +255,38 @@ export default function WaiConsultationRequest () {
               <textarea
                 name="biggestChallenge"
                 rows={4}
-                placeholder="What is your biggest challenge with visibility, lead generation, customer management, or business growth?"
-                className="rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-white"
+                placeholder="What is your biggest challenge right now?"
+                className="rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-white outline-none transition focus:border-blue-500"
               />
 
-              <button
+              <motion.button
                 type="submit"
                 disabled={loading}
-                className="rounded-xl bg-white px-8 py-5 font-semibold text-black transition hover:opacity-90"
+                whileHover={{
+                  scale: 1.03,
+                }}
+                whileTap={{
+                  scale: 0.97,
+                }}
+                className="rounded-xl bg-white px-8 py-5 font-semibold text-black"
               >
                 {loading
                   ? "Submitting..."
-                  : "Request My Consultation"}
-              </button>
+                  : "Request My Free Consultation"}
+              </motion.button>
 
             </div>
 
           </form>
 
           <div className="mt-8 text-center text-sm text-slate-500">
-            No obligation. We'll review your
-            business and determine if VDG OS
-            is the right fit for your growth
-            goals.
+            No obligation. We will review
+            your business, online presence,
+            and growth opportunities before
+            recommending a solution.
           </div>
 
-        </div>
+        </motion.div>
 
       </div>
     </section>
